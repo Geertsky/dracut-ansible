@@ -13,4 +13,7 @@ export PATH=/local/conda/envs/bambini-python/sbin:/local/conda/envs/bambini-pyth
 . /local/conda/envs/bambini-python/bin/activate
 python3 /local/conda/envs/bambini-python/bin/conda-unpack
 # clean up the archive
+rm -f /placeholder.img
+mkdir -p /local/conda/envs/bambini-python/
+tar -xf /tmp/bambini-python.tar.gz -C /local/conda/envs/bambini-python/
 rm -f /tmp/bambini-python.tar.gz
