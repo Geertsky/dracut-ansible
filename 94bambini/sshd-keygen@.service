@@ -6,6 +6,7 @@ ConditionFileNotEmpty=|!/etc/ssh/ssh_host_%i_key
 Type=oneshot
 EnvironmentFile=-/etc/sysconfig/sshd
 ExecStart=/usr/libexec/openssh/sshd-keygen %i
+ExecStartPost=/usr/bin/chmod 600 /etc/ssh/ssh_host_%i_key
 
 [Install]
 WantedBy=sshd-keygen.target
