@@ -9,10 +9,11 @@ source:
 requirements:
   host:
   - python 3.12
+  - sysroot_linux-64
   build:
     - {{ compiler('c') }}
-    - automake
     - autoconf
+    - automake
     - bc
     - check
     - gettext
@@ -23,14 +24,17 @@ requirements:
     - lvm2
     - make 
     - perl
+    - pkg-config
     - python 3.12
     - rsync
+    - sysroot_linux-64
     - tar
     - texinfo
     - util-linux=2.39.3=py312h40d0619_1
   run:
     - libiconv
     - lvm2
+    - sysroot_linux-64
 test:
   commands:
     - parted --help
